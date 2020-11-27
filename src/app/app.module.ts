@@ -3,9 +3,13 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { OrderComponent } from './order/order.component';
-import { ShippingComponent } from './shipping/shipping.component';
-import { PaymentComponent } from './payment/payment.component';
+import { OrderComponent } from './components/order/order.component';
+import { ShippingComponent } from './components/shipping/shipping.component';
+import { PaymentComponent } from './components/payment/payment.component';
+
+import { FormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
+import { ProductService } from './services/product.service';
 
 @NgModule({
   declarations: [
@@ -16,9 +20,13 @@ import { PaymentComponent } from './payment/payment.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule,
+    HttpClientModule,
   ],
-  providers: [],
+  providers: [
+    ProductService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

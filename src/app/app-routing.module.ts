@@ -1,12 +1,10 @@
-import { importType } from '@angular/compiler/src/output/output_ast';
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { from } from 'rxjs';
 
-import { OrderComponent } from './order/order.component';
+import { OrderComponent } from './components/order/order.component';
 
 const routes: Routes = [
-  { path: ':productId', component: OrderComponent }
+  { path: ':itemId', component: OrderComponent, pathMatch: 'full' }
 ];
 
 @NgModule({
