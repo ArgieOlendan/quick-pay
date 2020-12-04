@@ -24,9 +24,7 @@ import { ProductService } from './services/product.service';
     FormsModule,
     HttpClientModule,
   ],
-  providers: [
-    ProductService
-  ],
+  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

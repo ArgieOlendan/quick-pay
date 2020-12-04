@@ -1,6 +1,6 @@
 export class Product {
     name: string;
     price: number;
-    companyName: string;
+    company_name: string;
     qty: number;
 }

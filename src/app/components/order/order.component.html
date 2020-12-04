@@ -33,7 +33,7 @@
   <div class="row">
     <div class="col-12 product-company-name">
       <p class="small">
-        {{ product.companyName }}
+        {{ product.company_name }}
         <img src="../../assets/verified_logo.png" alt="verified_logo.png" class="verified-logo" />
       </p>
     </div>
@@ -89,7 +89,7 @@
   <div class="row">
     <div class="col-12">
       <div class="total">
-        <p>TOTAL {{ product.price | currency: "CAD" }}</p>
+        <p>TOTAL {{ total | currency: "CAD" }}</p>
       </div>
     </div>
   </div>
@@ -97,18 +97,19 @@
   <div class="row">
     <div class="col-12">
       <div class="submit-button">
-        <button type="submit" class="btn btn-primary btn-lg btn-block" id="submit">
+        <button type="submit" class="btn btn-primary btn-lg btn-block" id="submit" (click)="navigateToShippingPage()">
           BUY NOW
         </button>
       </div>
     </div>
   </div>
 
-  <div class="row">
-    <div class="col-12">
-      <div class="checkout-message">
-        <p>Secure checkout powered by quickpay-centre</p>
-      </div>
+</div>
+
+<div class="row">
+  <div class="col-12">
+    <div class="checkout-message">
+      <p>Secure checkout powered by quickpay-centre</p>
     </div>
   </div>
 </div>
