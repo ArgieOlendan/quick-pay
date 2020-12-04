@@ -1,1 +1,49 @@
-<p>payment works!</p>
+<div *ngIf="product">
+    <img src="../../../assets/card_logo.png" alt="card_logo.png" width="200" class="card-logo">
+
+    <hr>
+
+    <div class="rounded">
+        <div class="row">
+            <h6>
+                ORDER SUMMARY
+            </h6>
+        </div>
+
+        <div class="row">
+            <img src="../../../assets/product_logo.png" alt="product_logo.png" width="100">
+            <div>
+                <p class="small">{{ product.name }}</p>
+                <p class="small">QTY: {{ product.qty }}</p>
+                <p class="small">
+                    {{ product.company_name }}
+                    <img src="../../../assets/verified_logo.png" alt="verified_logo.png" width="10">
+                </p>
+            </div>
+        </div>
+
+        <hr>
+
+        <div class="row">
+            <div>
+                <p class="small">Subtotal: {{ product.price | currency: 'CAD'}}</p>
+                <p class="small">Taxes: {{ product.tax | currency: 'CAD' }}</p>
+            </div>
+        </div>
+
+        <hr>
+
+        <div class="row">
+            <div>
+                <p><b>Total</b> {{ product.price | currency: 'CAD' }}</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="rounded">
+        <h6>
+            SHIPPING INFORMATION
+        </h6>
+    </div>
+
+</div>

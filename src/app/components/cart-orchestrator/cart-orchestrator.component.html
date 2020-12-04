@@ -5,10 +5,11 @@
         [id] = "id"
         [showEmailSection] = "showEmailSection"
         (showEmail) = "updateEmailSection($event)"
+        (productObj) = "setProduct($event)"
         ></app-order>
     </div>
     <div *ngIf="showPaymentSection">
-        <app-payment></app-payment>
+        <app-payment [product] = "product"></app-payment>
     </div>
     <app-footer></app-footer>
 </div>

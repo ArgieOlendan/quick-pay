@@ -12,9 +12,9 @@ import { ProductService } from 'src/app/services/product.service';
 export class OrderComponent implements OnInit {
   @Input() id: string;
   @Input() showEmailSection:boolean;
-  @Input() showPaymentSection:boolean;
 
   @Output() showEmail = new EventEmitter<boolean>();
+  @Output() productObj = new EventEmitter<Product>();
 
   public product: Product;
   public total: number = 0;
@@ -45,6 +45,11 @@ export class OrderComponent implements OnInit {
   updateSection(): void {
     this.showEmailSection = false;
     this.showEmail.emit(this.showEmailSection);
+    this.setProduct(this.product);
+  }
+
+  setProduct(product:Product):void {
+    this.productObj.emit(product);
   }
 
   private calculateTotal() {

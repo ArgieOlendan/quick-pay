@@ -3,4 +3,5 @@ export class Product {
     price: number;
     company_name: string;
     qty: number;
+    tax: number;
 }
