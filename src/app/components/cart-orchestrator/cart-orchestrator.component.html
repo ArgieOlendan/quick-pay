@@ -1,0 +1,8 @@
+<div>
+    <div *ngIf="showEmailSection">
+        <app-order [id] = "id"></app-order>
+    </div>
+    <div *ngIf="showPaymentSection">
+        <app-payment></app-payment>
+    </div>
+</div>

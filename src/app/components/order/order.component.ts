@@ -10,22 +10,21 @@ import { ProductService } from 'src/app/services/product.service';
   styleUrls: ['./order.component.scss'],
 })
 export class OrderComponent implements OnInit {
-  private _id: string;
+  @Input() id: string;
 
   public product: Product;
   public total: number = 0;
 
   constructor(
     private _productService: ProductService,
-    private _route: ActivatedRoute,
     private _r: Router
   ) {
 
   }
 
   ngOnInit(): void {
-    this._id = this._route.snapshot.paramMap.get('id');
-    this.getProductById(this._id);
+    console.log(this.id)
+    this.getProductById(this.id);
   }
 
   increaseQty(): void {
@@ -50,7 +49,7 @@ export class OrderComponent implements OnInit {
 
   private getProductById(id: string): void {
     this._productService
-      .getItemById(this._id)
+      .getItemById(this.id)
       .subscribe((res) => {
         this.product = res;
       });
