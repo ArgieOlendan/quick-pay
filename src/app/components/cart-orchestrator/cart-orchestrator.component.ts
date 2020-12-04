@@ -9,7 +9,6 @@ import { ActivatedRoute } from '@angular/router';
 export class CartOrchestratorComponent implements OnInit {
   public id:string = '';
   public showEmailSection:boolean = true;
-  public showShippingSection:boolean = false;
   public showPaymentSection:boolean = false;
   
   constructor(
@@ -17,6 +16,11 @@ export class CartOrchestratorComponent implements OnInit {
 
   ngOnInit(): void {
     this.id = this._route.snapshot.paramMap.get('id');
+  }
+
+  updateEmailSection(showEmail: boolean):void {
+    this.showEmailSection = showEmail;
+    this.showPaymentSection = true;
   }
 
 }

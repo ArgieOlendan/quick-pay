@@ -1,8 +1,14 @@
 <div>
+    <app-progress-bar></app-progress-bar>
     <div *ngIf="showEmailSection">
-        <app-order [id] = "id"></app-order>
+        <app-order 
+        [id] = "id"
+        [showEmailSection] = "showEmailSection"
+        (showEmail) = "updateEmailSection($event)"
+        ></app-order>
     </div>
     <div *ngIf="showPaymentSection">
         <app-payment></app-payment>
     </div>
+    <app-footer></app-footer>
 </div>

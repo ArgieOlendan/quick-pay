@@ -1,5 +1,5 @@
 import { Route } from '@angular/compiler/src/core';
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Product } from 'src/app/models/Product';
 import { ProductService } from 'src/app/services/product.service';
@@ -11,13 +11,16 @@ import { ProductService } from 'src/app/services/product.service';
 })
 export class OrderComponent implements OnInit {
   @Input() id: string;
+  @Input() showEmailSection:boolean;
+  @Input() showPaymentSection:boolean;
+
+  @Output() showEmail = new EventEmitter<boolean>();
 
   public product: Product;
   public total: number = 0;
 
   constructor(
-    private _productService: ProductService,
-    private _r: Router
+    private _productService: ProductService
   ) {
 
   }
@@ -39,8 +42,9 @@ export class OrderComponent implements OnInit {
     }
   }
 
-  navigateToShippingPage() {
-    this._r.navigate(['shipping/information']);
+  updateSection(): void {
+    this.showEmailSection = false;
+    this.showEmail.emit(this.showEmailSection);
   }
 
   private calculateTotal() {
