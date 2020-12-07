@@ -5,7 +5,7 @@ import { Injectable } from '@angular/core';
   providedIn: 'root',
 })
 export class ProductService {
-  private baseURL = 'http://localhost:5000/api/items/';
+  private baseURL = 'https://quick-pay-server.herokuapp.com/api/items/';
 
   constructor(private _http: HttpClient) {}
 
