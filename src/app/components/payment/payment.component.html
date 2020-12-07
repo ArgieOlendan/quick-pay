@@ -41,9 +41,125 @@
     </div>
 
     <div class="rounded">
-        <h6>
-            SHIPPING INFORMATION
-        </h6>
+
+        <form>
+
+            <h6>YOUR DETAILS</h6>
+
+            <div class="form-group">
+
+                <label for="email">
+                    <strong>Email address</strong>
+                </label>
+                <input type="email" class="form-control" id="email" aria-describedby="emailHelp"
+                    placeholder="example@email.com">
+                <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone
+                    else.</small>
+
+            </div>
+
+            <h6>SHIPPING INFORMATION</h6>
+            
+            <div class="row">
+                <div class="col-6">
+
+                    <div class="form-group">
+                        <label for="first-name">
+                            <strong>First Name</strong>
+                        </label>
+                        <input type="text" class="form-control" id="first-name" placeholder="John">
+                    </div>
+
+                </div>
+
+                <div class="col-6">
+
+                    <div class="form-group mr-2">
+                        <label for="last-name">
+                            <strong>Last Name</strong>
+                        </label>
+                        <input type="text" class="form-control" id="last-name" placeholder="Doe">
+                    </div>
+                    
+                </div>
+
+            </div>
+
+            <div class="form-group">
+
+                <label for="address-line1">
+                    <strong>Address Line 1</strong>
+                </label>
+                <input type="text" class="form-control" id="address-line1" placeholder="1-5-12 Akebono, Kashiwa">
+                
+            </div>
+
+            <div class="form-group">
+
+                <label for="address-line2">
+                    <strong>Address Line 2</strong>
+                </label>
+                <input type="text" class="form-control" id="address-line2" placeholder="(OPTIONAL)">
+                
+            </div>
+
+            <div class="row">
+
+                <div class="col-6">
+
+                    <div class="form-group">
+                        <label for="state">
+                            <strong>Province/State</strong>
+                        </label>
+                        <select class="form-control" id="state">
+                            <option>1</option>
+                            <option>2</option>
+                            <option>3</option>
+                            <option>4</option>
+                            <option>5</option>
+                          </select>
+                    </div>
+
+                </div>
+
+                <div class="col-6">
+
+                    <label for="zip">
+                        <strong>Postal Code</strong>
+                    </label>
+                    <input type="text" class="form-control" id="zip" placeholder="277-0005">
+
+                </div>
+
+            </div>
+
+            <div class="form-group">
+                <label for="country">
+                    <strong>Country</strong>
+                </label>
+                <select class="form-control" id="country">
+                    <option>1</option>
+                    <option>2</option>
+                    <option>3</option>
+                    <option>4</option>
+                    <option>5</option>
+                  </select>
+            </div>
+
+            <div class="form-group">
+
+                <label for="phone-number">
+                    <strong>Phone Number</strong>
+                </label>
+                <input type="text" class="form-control" id="phone-number" placeholder="80-4801-1818">
+
+            </div>
+
+            <button type="submit" class="btn btn-primary btn-lg btn-block">
+                <strong>Next</strong>
+            </button>
+
+        </form>
     </div>
 
 </div>
